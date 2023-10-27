@@ -91,5 +91,13 @@ def logout():
     session.pop('user_id', None)
     return redirect('/')
 
+#delete function
+@app.route('/delete')
+def delete_profile():
+    if 'user_id' in session:
+        user_id = session['user_id']
+        cursor.execute("DELETE FROM users WHERE id = %s", (user_id,))
+        flash("profile deleted")
+        return redirect('/login')
 if __name__ == "__main__":
     app.run(debug=True)

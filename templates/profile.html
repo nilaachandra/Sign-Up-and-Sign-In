@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profilepage/{{ user[1] }}</title>
+    {% if user %}
+    <title>profilepage - {{ user[1] }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="profile-container">
         <img class="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
-        {% if user %}
+        
         <h1 class="profile-name">Welcome to your Profile,{{ user[1] }}</h1>
             <h2><strong>Name:</strong>{{ user[1] }}</h2>
             <h2><strong>Username:</strong>{{ user[2] }}</h2>
             <h2><strong>email:</strong> <a href="#">{{ user[3] }}</a></h2>
             {% endif %}
 </div>
-    <center><a href='/logout'><button class="logout-button">Logout</button>
-    </a></center>
+    <center><a href='/logout'><button class="logout-button">Logout</button></a></center>
+        <center><a href='/delete'><button class="delete-button">Delete</button></a></center>
+    
 </body>
 </html>

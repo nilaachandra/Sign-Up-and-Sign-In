@@ -13,7 +13,7 @@ li {
     padding: 0;
 }
 h5 {
-    color: red;
+    color: rgb(48, 46, 46);
 }
 form {
     max-width: 400px;
@@ -88,5 +88,20 @@ button:hover {
 }
 
 .logout-button:hover {
+    background-color: #0056b3; 
+}
+.delete-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; 
+}
+
+.delete-button:hover {
     background-color: #0056b3; 
 }
